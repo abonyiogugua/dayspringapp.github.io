@@ -14,7 +14,6 @@ body {
 }
 
 .login-container {
-    backdrop-filter: blur(100px);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 3px 3px 4px black;
@@ -32,9 +31,9 @@ form {
     width: 100%;
 }
 
-input[type="text"], input[type="password"] {
+input[type="email"], input[type="password"] {
     width: 90%;
-    padding: 0.5rem;
+    padding:5px;
     margin: 0.5rem 0;
     box-shadow: 3px 3px 4px black;
     border: 1px solid #ccc;
@@ -55,8 +54,8 @@ button {
     }
 }
 
-
-#message {
-    margin-top: 1rem;
-    font-size: 1rem;
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: red;
 }
