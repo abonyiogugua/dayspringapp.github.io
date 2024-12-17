@@ -11,19 +11,23 @@
 <body>
     
     <div class="login-container">
-        <h2>Sign up</h2>
+        <h2>User Login</h2>
         <form id="loginForm">
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" placeholder="example@gmail.com" required autocomplete="email"><br><br>
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" required><br><br>
     
             <label for="password">Password:</label><br>
-            <input type="password" id="password" placeholder="password" required autocomplete="new-password"><br><br>
+            <input type="password" id="password" required><br><br>
     
-            <button type="submit">sign up</button><br><br>
+            <button type="submit">Login</button><br><br>
+            <p>login as <a href="admin_login.html">Admin</a></p>
+        
+        </form> <br><br>
+    
+        <p id="message"></p>
+    </div>
+    
 
-            <p>already have an account? <a href="./assets/pages/login.html">Login</a> <br>or login as <a href="./assets/pages/admin_login.html">Admin</a></p>
-        </form>
-    
 
 </body>
 <script defer type="module" src="./assets/js/index.js"></script>

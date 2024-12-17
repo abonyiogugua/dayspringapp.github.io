@@ -1,13 +1,3 @@
-//loader=============//
-// Wait for the entire page to load
-window.addEventListener("load", function() {
-    // Hide the preloader
-    document.getElementById("preloader").style.display = "none";
-    
-    // Show the content
-    document.getElementById("content").style.display = "block";
-});
-//loader end=============//
 
 //theme change====================//
 

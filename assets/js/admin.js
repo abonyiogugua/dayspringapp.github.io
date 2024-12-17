@@ -21,7 +21,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
         // Redirect after 2 seconds
         setTimeout(() => {
-            window.location.href = "../pages/admin.html";
+            window.location.href = "/admin.html";
         }, 2000);
     } else {
         message.textContent = "Invalid username or password.";

@@ -1,42 +1,35 @@
+// login form===========================
+const users = [
+  { username: "dayspring12", password: "001124" },
+  { username: "dayspring13", password: "001125" }
+];
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
+// Handle form submission
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault();  // Prevent form from submitting normally
 
+  const username = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+  const message = document.getElementById("message");
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBuqKL0LLBAUPRx6msV9eX_dS32-brLuko",
-  authDomain: "dayspring-live-app.firebaseapp.com",
-  projectId: "dayspring-live-app",
-  storageBucket: "dayspring-live-app.firebasestorage.app",
-  messagingSenderId: "838426761447",
-  appId: "1:838426761447:web:6983d3be3ccd51d763aa42"
-};
+  // Check login credentials
+  const user = users.find(u => u.username === username && u.password === password);
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+  if (user) {
+      message.textContent = "Login successful! Redirecting...";
+      message.style.color = "green";
 
-const submit = document.getElementById('submit');
-submit.addEventListener("click", function (event) {
-  event.preventDefault()
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
-    //signup
-    const user = userCredential.user;
-    alert("Creating Account....")
-    window.location.href = "../pages/login.html";
-  })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      alert(errorMessage)
-    });
+      // Redirect after 2 seconds
+      setTimeout(() => {
+          window.location.href = "/home.html";
+      }, 2000);
+  } else {
+      message.textContent = "Invalid username or password.";
+      message.style.color = "red";
+  }
 
-})
+  // Clear the form
+  document.getElementById("loginForm").reset();
+});
 
-
-
-//user function===============================
+// login form end===========================
