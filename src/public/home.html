@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayspring Assembly App</title>
+    <!---=====================css script-->
+    <link rel="stylesheet" href="/src/css/home.css">
+    <!---=====================css script end-->
+</head>
+
+<body>
+
+
+    <!---Preloader===============================-->
+    <div id="preloader">
+        <img src="/assets/loader/loader.gif" alt="Loading...">
+    </div>
+    <!---Preloader end===============================-->
+
+
+    <!---=====================nav bar header section-->
+    <header>
+        <div class="nav_bar_container">
+            <div class="nav_bars">
+                <a href="#home_section" onclick="home_change()"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                        viewBox="0 -960 960 960" width="30px" fill="#ffff">
+                        <path
+                            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                    </svg></a>
+            </div>
+            <div class="nav_bars">
+
+                <a href="#about_section" onclick="about_change()"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                        viewBox="0 -960 960 960" width="30px" fill="#ffff">
+                        <path
+                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                    </svg> </a>
+            </div>
+            <div class="nav_bars">
+                <a href=" #notification_section" onclick="notification_change()"> <svg
+                        xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                        fill="#e8eaed">
+                        <path
+                            d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+                    </svg> </a>
+            </div>
+            <div class="nav_bars">
+                <a href=" #social_section" onclick="social_change()"><svg xmlns="http://www.w3.org/2000/svg"
+                        height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffff">
+                        <path
+                            d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                    </svg> </a>
+            </div>
+            <div class="nav_bars">
+                <a href="/src/login.html"> <svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                        viewBox="0 -960 960 960" width="30px" fill="#e8eaed">
+                        <path
+                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+                    </svg></a>
+            </div>
+        </div>
+    </header>
+    <!---=====================nav bar header section end-->
+    <p id="dot"></p>
+    <!---=====================main section-->
+    <main>
+        <!----===============home section====================-->
+        <section id="home_section">
+            <div class="home_contents">
+                <div class="home_cont">
+                    <a href="/src/public/stream1.html"><img src="/assets/banner/live.png" alt="live"></a>
+                    <h2>Stream 1</h2>
+                </div>
+                <div class="home_cont">
+                    <a href=" /src/public/stream2.html"><img src="/assets/banner/live.png" alt="live"></a>
+                    <h2>Stream 2</h2>
+                </div>
+                <div class="home_cont">
+                    <a href=" /src/public/stream3.html"><img src="/assets/banner/live.png" alt="live"></a>
+                    <h2>Stream 3</h2>
+                </div>
+            </div>
+        </section>
+        <!----===============home section end====================-->
+
+        <!----===============about section====================-->
+        <section id="about_section">
+            <div class="about_content">
+                <h2>About the Developer</h2>
+                <p>This software is designed and developed by Abonyi Ogugua Philip current ceo of 360kminds,a
+                    Software,Website & App developer</p> <br>
+                <h2>Terms of Service</h2>
+                <p> We build software technologies such as,mobile apps,software and websites for either personal or
+                    business use <br>
+                    We also promote businesses by either affiliate marketing or graphic flyer designs. <br>
+                    We charge you for our services depending on the services needed by our clients,unless we state
+                    otherwise. <br>
+                    We also refund to clients who are not sertisfied with our services or have complaints about our
+                    services. <br>
+                    We don't sell our personal data to people and we don't share information that directly identifies
+                    our clients privacy.</p>
+
+                <h2>contact us</h2>
+                <p> <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
+                        fill="#ffff">
+                        <path
+                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                    </svg> abonyiogugua.1@gmail.com </p> <br>
+                <p><svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
+                        fill="#ffff">
+                        <path
+                            d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                    </svg> +234 706-127-7506 </p>
+
+            </div>
+        </section>
+        <!----===============about section end====================-->
+
+        <!----===============notification section====================-->
+        <section id="notification_section">
+            <div class="notification_content">
+                <h2>Notifications</h2>
+                <div class="notification_cont">
+                    <ul id="noteList" class="note-list"></ul>
+                </div>
+            </div>
+        </section>
+        <!----===============notification section end====================-->
+
+
+        <!----===============social section====================-->
+        <section id="social_section">
+            <div class="social_content">
+
+                <h2>Contact us</h2> <br>
+
+                <div class="social_cont">
+
+                    <div class="social_bio">
+                        <a href="https://www.youtube.com/channel/UCWMMXkpXu7rWQCJvycE-Xaw"><img src="/assets/banner/youtube.png" alt="youtube"></a> <br>
+                    </div>
+                    <div class="social_bio">
+                        <a href="https://web.facebook.com/dayspringassembly/?_rdc=1&_rdr"><img src="/assets/banner/facebook.jpg" alt="facebook"></a>
+                    </div>
+                    <div class="social_bio">
+                        <a href="https://www.dayspringassembly.org.ng/"><img src="/assets/banner/website.jpg" alt="website"></a>
+                    </div>
+
+                </div>
+
+                <div class="social_address">
+                    <p> <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
+                            fill="#ffff">
+                            <path
+                                d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+                        </svg> info@dayspringassembly.org.ng </p> <br>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
+                            fill="#ffff">
+                            <path
+                                d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                        </svg> +234-803-663-1996 </p><br>
+                    <p>10 Dayspring Annex, Off Oraifite Street, Awada P.O.BOX 6754, Onitsha, Nigeria.</p>
+                </div>
+
+
+            </div>
+        </section>
+        <!----===============social section end====================-->
+
+    </main>
+    <!---=====================nav bar header section end-->
+
+    <!---=====================theme toggle button-->
+    <div class="toggle-container" onclick="toggleTheme()">
+        <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#e8eaed">
+            <path
+                d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z" />
+        </svg>
+    </div>
+    <!---=====================theme toggle end-->
+
+
+</body>
+<!---=====================javascript script-->
+<script defer src="/src/js/home.js"></script>
+<!---=====================javascript script end-->
+
+</html>

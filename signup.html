@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayspring App</title>
+    <link rel="stylesheet" href="/src/css/sign.css">
+</head>
+
+<body>
+    <div class="form_section">
+        <form  method="post">
+            <h2>Sign Up</h2>
+            <label for="email">Email Address</label> <br>
+            <input type="email" placeholder="example@email.com" id="email" required autocomplete="email">
+            <br><br><br><br>
+            <label for="password">Password</label><br>
+            <input type="password" placeholder="password" id="password" required autocomplete="current-password">
+            <br><br>
+            <button type="submit" id="submit">sign up</button><br><br>
+            <p>already have an account? <a href="/src/login.html">Login</a> <br>or login as <a href="/src/public/admin_login.html">Admin</a></p>
+        </form>
+    </div>
+</body>
+<script defer type="module" src="/src/js/signup.js"></script>
+
+</html>

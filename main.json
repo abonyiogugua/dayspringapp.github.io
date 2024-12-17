@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Dayspring Application",
+        "appId": "com.Dayspringapp",
+        "description": "Dayspring Application/live stream app",
+        "productName": "Dayspringapp"
+    },
+    {
+        "developer": [
+            {
+                "Author": "Philip Willson",
+                "Email": "abonyiogugua.1@gmail.com",
+                "PhoneNumber": "07061277506",
+                "Facebook": " https://www.facebook.com/ogugua.abonyi?mibextid=ZbWKwL",
+                "Instagram": "https://www.instagram.com/billy_breez?r=nametag",
+                "Blog": "https://360kminds.blogspot.com/",
+                "Youtube": "https://www.youtube.com/@360kHUB",
+                "linkedin": "https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile",
+                "Github": "https://github.com/abonyiogugua?tab=repositories"
+            }
+        ],
+        "version":"v1.0"
+    }
+]
