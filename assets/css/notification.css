@@ -1,144 +1,112 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 /*================root color============*/
 :root {
-    --nav:#2e2e3f;
-    --nav-bg:#ff0000;
-    --hover-color:#0000ff;
-    --background-light:  #eadddd;
-    --text-light: #000000;
-    --background-dark: #1e1e2f;
-    --text-dark: #ffffff;
+  --nav-bg: #ff0000;
+  --hover-color: #0000ff;
+  --background-light: #eadddd;
+  --text-light: #000000;
+  --background-dark: #1e1e2f;
+  --text-dark: #ffffff;
   }
-  
-  body {
-    background-color: var(--background-light);
-    color: var(--text-light);
-    font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  /*theme change==============*/
-  body.dark-mode {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-  }
-  
-  .toggle-container {
-    position: fixed;
-    top: 4rem;
-    right: 1rem;
-    cursor: pointer;
-  }
-  
-  .toggle-container svg {
-    width: 40px;
-    height: 40px;
-    background-color: var(--nav-bg);
-    border-radius: 50%;
-    fill: var(--text-light);
-    transition: fill 0.3s ease;
-    box-shadow: 3px 3px 4px black;
-    border: 2px solid black;
-  }
-  
-  body.dark-mode svg {
-    fill: var(--text-dark);
-  }
-  /*theme change end==============*/
-  
-  /*================root color end============*/
-  
-    /*================nav bar ============*/
-  .nav-bar{
-    padding: 5px;
-    background-color: #2e2e3f;
-    margin-bottom: 60px;
-}
-.nav-bar a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-  /*================nav bar end============*/
 
-/*notification body==============*/
-.container {
-margin-top: 20px;
-    max-width: 600px;
-    margin: auto;
-    background: var(--nav);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px black;
+body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-h2{
-    text-shadow: 3px 3px 4px black;
-    margin: 10px;
-    color: red;
+
+/*================theme change============*/
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
 }
+
+.toggle-container {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.toggle-container svg {
+  width: 40px;
+  height: 40px;
+  background-color: var(--nav-bg);
+  border-radius: 50%;
+  fill: var(--text-light);
+  transition: fill 0.3s ease;
+  box-shadow: 3px 3px 4px black;
+  border: 2px solid black;
+}
+
+body.dark-mode svg {
+  fill: var(--text-dark);
+}
+
+/*================theme change end============*/
+
+/*================nav-bar============*/
+.nav_bars{
+  background-color: #2e2e3f;
+}
+.nav_bars svg{
+  padding: 5px;
+}
+
+/*================nav-bar end============*/
+
+
+
+/*================root color end============*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
-    font-size: 2rem;
-    text-shadow: 3px 3px 4px black;
-    text-align: center;
-    color: red;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  color: var(--nav-bg);
+  font-size: 2rem;
+  margin: 20px;
+  margin-bottom: 30px;
 }
-textarea {
-    box-shadow: 3px 3px 4px black;
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 14px;
-    resize: none;
+form{
+  text-align: center;
 }
-button {
-    box-shadow: 3px 3px 4px black;
-    padding: 10px 15px;
-    margin: 5px;
-    border: none;
-    background-color:var(--nav-bg);
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover{
-  background-color: var(--hover-color);
-    }
-}
-.note-list {
-    list-style-type: none;
-    padding: 0;
-    color: black;
-    font-weight: bold;
 
+form, ul {
+  max-width: 600px;
+  margin: auto;
 }
-.note-item {
-    background: white;
-    margin: 20px 0;
-    padding: 20px;
-    border: 3px solid white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+textarea {
+ padding: 10px;
+  width: 300px;
+  height: 200px;
+}
+
+button {
+  padding: 10px 20px;
+  background: var(--nav-bg);
+  box-shadow: 3px 3px 4px black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  border-radius: 10px;
+  margin-top: 20px;
+  &:hover{
+    background-color: var(--hover-color);
   }
-  .note-item button {
-    background:transparent;
-    border: none;
-    color: var(--nav-bg);
-    font-weight: bolder;
-    font-size: large;
-    text-shadow: 3px 3px 4px black;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    &:hover{
-  color: var(--hover-color);
-    }
-  }
-  /*notification body end==============*/
+}
+
+label{
+  color: var(--nav-bg);
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/*notification display end==================*/

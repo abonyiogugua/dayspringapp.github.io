@@ -43,9 +43,8 @@ home_section.style.display="none";
 notification_section.style.display="block";
 about_section.style.display="none";
 social_section.style.display="none";
-if(notification_section.style.display=="block"){
 notification_dot.style.display="none";
-}
+
 
 }
 //content pages end=============//
@@ -68,58 +67,57 @@ window.onload = loadTheme;
 //theme change page end=============//
 
 //notification page================//
-const noteInput = document.getElementById('noteInput');
-const noteList = document.getElementById('noteList');
+// Store messages in localStorage for simplicity
+const messageForm = document.getElementById("messageForm");
+const messageList = document.getElementById("messageList");
 
-// Load notes from localStorage when the page loads
-document.addEventListener('DOMContentLoaded', loadNotes);
-
-function loadNotes() {
-  const notes = JSON.parse(localStorage.getItem('notes')) || [];
-  notes.forEach(note => createNoteElement(note));
+// Handle Admin Message Sending
+if (messageForm) {
+    messageForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const message = document.getElementById("message").value;
+        sendMessage(message);
+        alert("Message Sent!");
+        messageForm.reset();
+    });
 }
 
-function saveNotes() {
-  const notes = Array.from(document.querySelectorAll('.note-item .note-text')).map(
-      note => note.textContent
-  );
-  localStorage.setItem('notes', JSON.stringify(notes));
+// Handle User Messages Display
+if (messageList) {
+    displayMessages();
 }
 
-function createNoteElement(noteText) {
-  const li = document.createElement('li');
-  li.className = 'note-item';
+function sendMessage(message) {
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messages.push(message);
+    localStorage.setItem("messages", JSON.stringify(messages));
+}
 
-  if ( li.className == 'note-item'){
+function displayMessages() {
+    const messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messageList.innerHTML = ""
+    messages.forEach((msg, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${msg} <button class="delete" onclick="deleteMessage(${index})">X</button>`;
+        messageList.appendChild(li);
+    });
     notification_dot.style.display="block";
-  }
-  else{
-    notification_dot.style.display="none";
-  }
-  
 
-  const span = document.createElement('span');
-  span.className = 'note-text';
-  span.textContent = noteText;
 
-  const deleteBtn = document.createElement('button');
-  deleteBtn.textContent = 'X';
-  deleteBtn.onclick = () => {
-      li.remove();
-      saveNotes();
-  };
-
-  li.appendChild(span);
-  li.appendChild(deleteBtn);
-  noteList.appendChild(li);
 }
 
-function addNote() {
-  const noteText = noteInput.value.trim();
-  if (noteText) {
-      createNoteElement(noteText);
-      saveNotes();
-      noteInput.value = ''; // Clear the input field
-  }
+function deleteMessage(index) {
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messages.splice(index, 1);
+    localStorage.setItem("messages", JSON.stringify(messages));
+    displayMessages();
+    notification_dot.style.display="none";  
 }
+
+
+
+
+
+
+
 //notification page end================//

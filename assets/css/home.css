@@ -116,13 +116,22 @@
   /*================about section end============*/
   
   /*================notification section ============*/
+  @media(max-width:750px){
+    #dot{
+      left: 210px;
+      top: 10px;  
+      
+    }
+
+  }
+  
   #dot {
     border-radius: 50%;
     background-color: var(--nav-bg);
     width: 12px;
     height: 12px;
     position: fixed;
-    left: 210px;
+    left: 200px;
     top: 10px;
     display: none;
   }
@@ -140,43 +149,40 @@
     margin: 20px;
     margin-bottom: 30px;
   }
-  
-  .note-list {
+  ul {
     list-style-type: none;
-    padding: 0;
-    color: black;
-    font-weight: bold;
-  
-  }
-  
-  .note-item {
-    background: white;
-    margin: 20px 0;
-    padding: 20px;
-    border: 3px solid white;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .note-item button {
-    background: transparent;
-    border: none;
-    color: var(--nav-bg);
-    font-weight: bolder;
-    font-size: large;
-    text-shadow: 3px 3px 4px black;
-    margin: 5px;
     padding: 10px;
+}
+
+li {
+    background: #f4f4f4;
+    margin: 20px;
+    color: black;
+    padding: 15px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px black;
+    position: relative;
+}
+
+button.delete {
+    position: absolute;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 3px 3px 4px black;
+    right: 1px;
+    top: 1px;
+    color: white;
+    border: none;
     border-radius: 5px;
-    cursor: pointer;
-  
-    &:hover {
-      color: var(--hover-color);
+    box-shadow: 3px 3px 4px black;
+    background: #e74c3c;
+    &:hover{
+      background-color: var(--hover-color);
     }
-  }
-  
+    
+}
+
   /*================notification section end============*/
   
   /*================social section============*/

@@ -1,71 +1,63 @@
-
-//theme change====================//
-
+//theme change page=============//
 function toggleTheme(){
     const body = document.body;
-       body.classList.toggle('dark-mode');
-       const isDarkMode = body.classList.contains('dark-mode');
-       localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-         };
-   
-   
-     const loadTheme = () => {
-       const theme = localStorage.getItem('theme');
-       if (theme === 'dark') {
-         document.body.classList.add('dark-mode');
-       }
-     };
-   
-     window.onload = loadTheme;
-   
-
-//theme change end================//
-
-//notification page================//
-const noteInput = document.getElementById('noteInput');
-const noteList = document.getElementById('noteList');
-
-// Load notes from localStorage when the page loads
-document.addEventListener('DOMContentLoaded', loadNotes);
-
-function loadNotes() {
-    const notes = JSON.parse(localStorage.getItem('notes')) || [];
-    notes.forEach(note => createNoteElement(note));
-}
-
-function saveNotes() {
-    const notes = Array.from(document.querySelectorAll('.note-item .note-text')).map(
-        note => note.textContent
-    );
-    localStorage.setItem('notes', JSON.stringify(notes));
-}
-
-function createNoteElement(noteText) {
-    const li = document.createElement('li');
-    li.className = 'note-item';
-
-    const span = document.createElement('span');
-    span.className = 'note-text';
-    span.textContent = noteText;
-
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'X';
-    deleteBtn.onclick = () => {
-        li.remove();
-        saveNotes();
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        };
+    const loadTheme = () => {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
     };
+    
+    window.onload = loadTheme;
+    //theme change page end=============//
+    
+// Store messages in localStorage for simplicity
+const messageForm = document.getElementById("messageForm");
+const messageList = document.getElementById("messageList");
 
-    li.appendChild(span);
-    li.appendChild(deleteBtn);
-    noteList.appendChild(li);
+// Handle Admin Message Sending
+if (messageForm) {
+    messageForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const message = document.getElementById("message").value;
+        sendMessage(message);
+        alert("Message Sent!");
+        messageForm.reset();
+    });
 }
 
-function addNote() {
-    const noteText = noteInput.value.trim();
-    if (noteText) {
-        createNoteElement(noteText);
-        saveNotes();
-        noteInput.value = ''; // Clear the input field
-    }
+// Handle User Messages Display
+if (messageList) {
+    displayMessages();
 }
-//notification page end================//
+
+function sendMessage(message) {
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messages.push(message);
+    localStorage.setItem("messages", JSON.stringify(messages));
+}
+
+function displayMessages() {
+    const messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messageList.innerHTML = "";
+
+    messages.forEach((msg, index) => {
+        const li = document.createElement("li");
+        li.innerHTML = `${msg} <button class="delete" onclick="deleteMessage(${index})">X</button>`;
+        messageList.appendChild(li);
+    });
+}
+
+function deleteMessage(index) {
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messages.splice(index, 1);
+    localStorage.setItem("messages", JSON.stringify(messages));
+    displayMessages();
+}
+
+
+
