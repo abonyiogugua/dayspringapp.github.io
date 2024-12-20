@@ -67,57 +67,33 @@ window.onload = loadTheme;
 //theme change page end=============//
 
 //notification page================//
-// Store messages in localStorage for simplicity
-const messageForm = document.getElementById("messageForm");
-const messageList = document.getElementById("messageList");
 
-// Handle Admin Message Sending
-if (messageForm) {
-    messageForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const message = document.getElementById("message").value;
-        sendMessage(message);
-        alert("Message Sent!");
-        messageForm.reset();
-    });
-}
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDRyb6LIoiWSPulOenyt05RbBx97fSYnmU",
+  authDomain: "dayspring-app-ac7cd.firebaseapp.com",
+  projectId: "dayspring-app-ac7cd",
+  storageBucket: "dayspring-app-ac7cd.firebasestorage.app",
+  messagingSenderId: "886633027940",
+  appId: "1:886633027940:web:d1d21fe6627bb164f30271"
+};
 
-// Handle User Messages Display
-if (messageList) {
-    displayMessages();
-}
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-function sendMessage(message) {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages.push(message);
-    localStorage.setItem("messages", JSON.stringify(messages));
-}
+// Request permission to send notifications
+messaging.requestPermission()
+.then(() => messaging.getToken())
+.then(token => {
+    console.log("FCM Token:", token);
+    messaging.subscribeToTopic("users");
+})
+.catch(err => console.error("Permission denied", err));
 
-function displayMessages() {
-    const messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messageList.innerHTML = ""
-    messages.forEach((msg, index) => {
-        const li = document.createElement("li");
-        li.innerHTML = `${msg} <button class="delete" onclick="deleteMessage(${index})">X</button>`;
-        messageList.appendChild(li);
-    });
-    notification_dot.style.display="block";
-
-
-}
-
-function deleteMessage(index) {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages.splice(index, 1);
-    localStorage.setItem("messages", JSON.stringify(messages));
-    displayMessages();
-    notification_dot.style.display="none";  
-}
-
-
-
-
-
-
+// Handle incoming messages
+messaging.onMessage(payload => {
+console.log("Notification received:", payload);
+alert(`Title: ${payload.notification.title}\nMessage: ${payload.notification.body}`);
+});
 
 //notification page end================//

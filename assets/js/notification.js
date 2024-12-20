@@ -14,50 +14,53 @@ function toggleTheme(){
     
     window.onload = loadTheme;
     //theme change page end=============//
+
     
-// Store messages in localStorage for simplicity
-const messageForm = document.getElementById("messageForm");
-const messageList = document.getElementById("messageList");
-
-// Handle Admin Message Sending
-if (messageForm) {
-    messageForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const message = document.getElementById("message").value;
-        sendMessage(message);
-        alert("Message Sent!");
-        messageForm.reset();
-    });
-}
-
-// Handle User Messages Display
-if (messageList) {
-    displayMessages();
-}
-
-function sendMessage(message) {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages.push(message);
-    localStorage.setItem("messages", JSON.stringify(messages));
-}
-
-function displayMessages() {
-    const messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messageList.innerHTML = "";
-
-    messages.forEach((msg, index) => {
-        const li = document.createElement("li");
-        li.innerHTML = `${msg} <button class="delete" onclick="deleteMessage(${index})">X</button>`;
-        messageList.appendChild(li);
-    });
-}
-
-function deleteMessage(index) {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages.splice(index, 1);
-    localStorage.setItem("messages", JSON.stringify(messages));
-    displayMessages();
-}
 
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDRyb6LIoiWSPulOenyt05RbBx97fSYnmU",
+  authDomain: "dayspring-app-ac7cd.firebaseapp.com",
+  projectId: "dayspring-app-ac7cd",
+  storageBucket: "dayspring-app-ac7cd.firebasestorage.app",
+  messagingSenderId: "886633027940",
+  appId: "1:886633027940:web:d1d21fe6627bb164f30271"
+};
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const messaging = firebase.messaging();
+
+// Request permission for notifications
+messaging.requestPermission()
+    .then(() => messaging.getToken())
+    .then(token => console.log("FCM Token:", token))
+    .catch(err => console.error("Permission denied", err));
+
+// Handle form submission
+document.getElementById("notificationForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const title = document.getElementById("title").value;
+    const message = document.getElementById("message").value;
+
+    fetch("https://fcm.googleapis.com/fcm/send", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": "BPqNDiMmlDL2URmWfPXTSum6eHHnB2O89kwz9W6xyJ8Sv72rsnyze1axcYN1IxCzeGsHgt60Ysh9gZp9kCCR2FQ"
+        },
+        body: JSON.stringify({
+            to: "/topics/all",
+            notification: {
+                title: title,
+                body: message,
+                icon: "icon.png" // Optional icon
+            }
+        })
+    })
+    .then(response => response.json())
+    .then(data => console.log("Notification sent:", data))
+    .catch(err => console.error("Error sending notification:", err));
+});
