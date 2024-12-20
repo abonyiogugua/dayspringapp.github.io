@@ -22,31 +22,21 @@ function home_change(){
   home_section.style.display="block";
   about_section.style.display="none";
   social_section.style.display="none";
-  notification_section.style.display="none";
 }
 function about_change(){
   home_section.style.display="none";
   about_section.style.display="block";
   social_section.style.display="none";
-  notification_section.style.display="none";
 }
 
 function social_change(){
   home_section.style.display="none";
-  notification_section.style.display="none";
   about_section.style.display="none";
   social_section.style.display="block";
 }
 
-function notification_change(){
-home_section.style.display="none";
-notification_section.style.display="block";
-about_section.style.display="none";
-social_section.style.display="none";
-notification_dot.style.display="none";
 
 
-}
 //content pages end=============//
 
 //theme change page=============//
