@@ -9,40 +9,33 @@
   }
   
   body {
-    background-color: var(--background-light);
     color: var(--text-light);
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s, color 0.3s;
   }
-  
+header{
+  text-align:center;
+  position:none;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}  
   /*================theme change============*/
-  body.dark-mode {
-    background-color: var(--background-dark);
-    color: var(--text-dark);
-  }
-  
-  .toggle-container {
-    position: fixed;
-    top: 4rem;
-    right: 1rem;
-    cursor: pointer;
-  }
-  
-  .toggle-container svg {
-    width: 40px;
-    height: 40px;
-    background-color: var(--nav-bg);
-    border-radius: 50%;
-    fill: var(--text-light);
-    transition: fill 0.3s ease;
-    box-shadow: 3px 3px 4px black;
-    border: 2px solid black;
-  }
-  
-  body.dark-mode svg {
-    fill: var(--text-dark);
-  }
-  
+body.light-mode {
+  background-color: var(--background-light);
+  color: #000000;
+}
+body.dark-mode {
+  background-color: var(--background-dark);
+  color: #ffffff;
+}
+.header_toogle button{
+  background-color: transparent;
+  border: none;
+}
+#darkm{
+  display: none;
+}
+
   /*================theme change end============*/
   
   /*================root color end============*/
@@ -50,32 +43,149 @@
     margin: 0;
     padding: 0;
   }
+
+  /*==========background svg animations ========================*/
+  .home_svg_bg{
+    position: fixed;
+    top: 40px;
+    left: -170px;
+    z-index: -10;
+    opacity: 0.3;
+}
+
+#Circle1{
+  filter: drop-shadow(10px 6px 4px black);
+  animation: ball1 10s linear infinite;
+}
+#Circle2{
+  animation: ball1 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+#Oval1{
+  animation: ball1 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+@keyframes ball1{
+  60%{transform: translateY(20px);}
+  40%{transform: translateX(-30px);}
+}
+
+#Circle3{
+  animation: ball2 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+@keyframes ball2{
+  60%{transform: translateX(50px);}
+  40%{transform: translateY(-20px);}
+}
+
+#Circle4{
+  animation: ball3 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+@keyframes ball3{
+  40%{transform: translateX(30px);}
+  20%{transform: translateY(-40px);}
+}
+
+#Circle5{
+  animation: ball4 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+@keyframes ball4{
+  30%{transform: translateY(-60px);}
+  10%{transform: translateX(-40px);}
+}
+
+#Oval2{
+  animation: ovral2 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+@keyframes ovral2{
+  40%{transform: translateY(-30px);}
+  10%{transform: translateX(20px);}
+}
+
+#Circle6{
+  animation: ball5 10s linear infinite;
+  filter: drop-shadow(10px 6px 4px black);
+}
+@keyframes ball5{
+  30%{transform: translateY(-10px);}
+  10%{transform: translateX(20px);}
+}
+
+#Line1{
+  filter: drop-shadow(10px 6px 4px black);
+  animation: line1 20s linear infinite;
+}
+@keyframes line1{
+  40%{transform: translateY(-10px);}
+  10%{transform: translateY(5px);}
+}
+#Line2{
+  filter: drop-shadow(10px 6px 4px black);
+  animation: line2 20s linear infinite;
+}
+@keyframes line2{
+  50%{transform: translateX(-30px);}
+  30%{transform: translateY(40px);}
+}
+
+#Line3{
+  filter: drop-shadow(10px 6px 4px black);
+  animation: line3 20s linear infinite;
+}
+@keyframes line3{
+  50%{transform: translateY(30px);}
+  30%{transform: translateY(50px);}
+}
+
+#Line5{
+  filter: drop-shadow(10px 6px 4px black);
+  animation: line5 20s linear infinite;
+}
+@keyframes line5{
+  30%{transform: translateY(240px);}
+  15%{transform: translateY(40px);}
+}
+/*==========background svg animations end========================*/
+
   
   /*================nav bar============*/
+  
   .nav_bar_container {
     display: flex;
     box-shadow: 3px 3px 4px black;
     justify-content: space-between;
     background-color: #2e2e3f;
+    opacity: 0.9;
   }
   
   .nav_bar_container svg {
     padding: 10px;
   }
-  
+  #dark1{
+    display:none;
+  }
   /*================nav bar end============*/
   #home_section img {
     width: 200px;
     height: 200px;
     border-radius: 30px;
     border: 2px solid var(--nav-bg);
-    margin-bottom: 20px;
     margin-top: 20px;
     box-shadow: 3px 3px 4px black;
   
     &:hover {
+      scale:1.2;
+      transition:2s;
       box-shadow: 3px 3px 7px var(--hover-color);
     }
+  }
+  .home_cont{
+    margin-bottom: 20px;
+    margin-bottom:100px;
   }
   
   #home_section {
@@ -86,7 +196,7 @@
   #home_section h2 {
     text-shadow: 2px 2px 4px black;
     color: var(--nav-bg);
-    font-size: 1.4rem;
+    font-size: 3rem;
   }
   
   /*================about section============*/
@@ -94,6 +204,7 @@
     margin: 50px;
     display: none;
     text-align: center;
+    margin-bottom:100px;
   }
   
   #about_section h2 {
@@ -116,73 +227,8 @@
   /*================about section end============*/
   
   /*================notification section ============*/
-  @media(max-width:750px){
-    #dot{
-      left: 210px;
-      top: 10px;  
-      
-    }
-
-  }
   
-  #dot {
-    border-radius: 50%;
-    background-color: var(--nav-bg);
-    width: 12px;
-    height: 12px;
-    position: fixed;
-    left: 200px;
-    top: 10px;
-    display: none;
-  }
   
-  #notification_section {
-    margin: 50px;
-    display: none;
-    text-align: center;
-  }
-  
-  #notification_section h2 {
-    text-shadow: 2px 2px 4px black;
-    color: var(--nav-bg);
-    font-size: 2rem;
-    margin: 20px;
-    margin-bottom: 30px;
-  }
-  ul {
-    list-style-type: none;
-    padding: 10px;
-}
-
-li {
-    background: #f4f4f4;
-    margin: 20px;
-    color: black;
-    padding: 15px;
-    font-family: sans-serif;
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px black;
-    position: relative;
-}
-
-button.delete {
-    position: absolute;
-    padding: 5px;
-    font-weight: bold;
-    text-shadow: 3px 3px 4px black;
-    right: 1px;
-    top: 1px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 3px 3px 4px black;
-    background: #e74c3c;
-    &:hover{
-      background-color: var(--hover-color);
-    }
-    
-}
-
   /*================notification section end============*/
   
   /*================social section============*/
@@ -190,6 +236,7 @@ button.delete {
     margin: 50px;
     display: none;
     text-align: center;
+    margin-bottom:100px;
   }
   
   #social_section img {
@@ -229,24 +276,56 @@ button.delete {
   /*================social section end============*/
   
   /*================mobile view============*/
-  @media (max-width:850) {
-    .nav_bar_container svg {
-      width: 38px;
+    
+  /*==========phones===================*/
+  
+  @media only screen and (max-width:600px) {
+  
+    header{
+      position:fixed;
+      bottom:0px;
+      width:360px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     }
-  
-    #dot {
-      border-radius: 50%;
-      background-color: var(--nav-bg);
-      width: 12px;
-      height: 12px;
-      position: fixed;
-      left: 210px;
-      top: 10px;
-      display: none;
-    }
-  
-  
   
   }
+  @media only screen and (min-width:600px) {
   
+    header{
+      position:fixed;
+      bottom:0px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    }
+  
+  }
+
+
+  /*==========tablets===================*/
+  @media only screen and (min-width:900px) {
+  
+    header{
+      position:fixed;
+      width:770px;
+      bottom:0px;
+      left:100px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    }
+  
+  }
+  @media only screen and (min-width:992px) {
+  
+    header{
+      position:fixed;
+      width:370px;
+      bottom:0px;
+      left:10px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    }
+  
+  }
+
   /*================mobile view end============*/

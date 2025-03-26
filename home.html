@@ -12,51 +12,120 @@
 
 <body>
 
+ <!----===============background image====================-->
 
-    <!---=====================nav bar header section-->
-    <header>
-        <div class="nav_bar_container">
-            <div class="nav_bars">
-                <a href="#home_section" onclick="home_change()"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
-                        viewBox="0 -960 960 960" width="30px" fill="#ffff">
-                        <path
-                            d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
-                    </svg></a>
-            </div>
-            <div class="nav_bars">
+<!----background svg=========================-->
+<div class="home_svg_bg">
+    <?xml version="1.0" encoding="utf-8"?>
+<svg width="980px" height="702px" viewBox="0 0 754 502" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.22993971" y1="0.7819284" x2="0.87536556" y2="0.10813147" id="gradient_1">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="100%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.20348752" y1="0.8338623" x2="2.1153448" y2="-1.3188547" id="gradient_2">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="68.21%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.20349264" y1="0.8338671" x2="2.115344" y2="-1.3188448" id="gradient_3">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="74.65%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.112877846" y1="0.9358959" x2="2.0246935" y2="-1.216775" id="gradient_4">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="77.380005%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.20348763" y1="0.8338615" x2="2.1153462" y2="-1.3188598" id="gradient_5">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="100%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.20347404" y1="0.8338742" x2="2.1153622" y2="-1.3188763" id="gradient_6">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="100%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.22993612" y1="0.7819265" x2="0.8753681" y2="0.10812503" id="gradient_7">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="100%" stop-color="#CF4339" />
+    </linearGradient>
+    <linearGradient gradientUnits="objectBoundingBox" x1="0.2299428" y1="0.78192997" x2="0.87535906" y2="0.1081419" id="gradient_8">
+      <stop offset="0%" stop-color="#90C418" />
+      <stop offset="100%" stop-color="#CF4339" />
+    </linearGradient>
+    <path d="M0 0L750 0L750 500L0 500L0 0L0 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="ball_group">
+    <g id="OBJECTS">
+      <g id="Group">
+        <g id="Mask-Group">
+          <path d="M4 2L754 2L754 502L4 502L4 2L4 2Z" id="SVGID_00000026875008990571379200000018221677350814325380_" fill="none" fill-rule="evenodd" stroke="none" />
+          <g id="Mask-Group">
+            <path d="M0 0L750 0L750 500L0 500L0 0L0 0Z" id="path_2" fill="none" fill-rule="evenodd" stroke="none" />
+            <g clip-path="url(#clip_1)">
+              <g id="Group" transform="translate(4.8559875 7.606018)">
+                <g id="Group#1">
+                  <g id="ball1">
+                    <g id="balls">
+                      <path d="M0 110.572C0 49.5048 49.5048 0 110.572 0C171.639 0 221.144 49.5048 221.144 110.572C221.144 171.639 171.639 221.144 110.572 221.144C49.5048 221.144 0 171.639 0 110.572L0 110.572Z" id="Circle1" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="0.75" />
+                      <path d="M656.254 249.753C656.254 230.026 672.245 214.035 691.972 214.035C711.698 214.035 727.69 230.026 727.69 249.753C727.69 269.479 711.698 285.471 691.972 285.471C672.245 285.471 656.254 269.479 656.254 249.753L656.254 249.753Z" id="Circle2" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="0.75" />
+                      <path d="M122.743 411.963C113.374 410.434 107.017 401.599 108.545 392.229C110.074 382.859 118.909 376.503 128.279 378.031C137.649 379.56 144.006 388.395 142.477 397.765C140.948 407.135 132.113 413.491 122.743 411.963L122.743 411.963Z" id="Oval1" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="0.75" />
+                      <path d="M478.513 67.394C478.513 57.8997 486.21 50.203 495.704 50.203C505.198 50.203 512.895 57.8997 512.895 67.394C512.895 76.8883 505.198 84.585 495.704 84.585C486.21 84.585 478.513 76.8883 478.513 67.394L478.513 67.394Z" id="Circle2" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="0.75" />
+                      <path d="M574.741 455.749C538.477 419.485 538.477 360.689 574.741 324.425C611.005 288.161 669.801 288.161 706.065 324.425C742.329 360.689 742.329 419.485 706.065 455.749C669.801 492.013 611.005 492.013 574.741 455.749L574.741 455.749Z" id="Oval2" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="0.75" />
+                      <path d="M19.253 110.572C19.253 67.318 54.3176 32.253 97.572 32.253C140.826 32.253 175.891 67.318 175.891 110.572C175.891 153.826 140.826 188.891 97.572 188.891C54.3176 188.891 19.253 153.826 19.253 110.572L19.253 110.572Z" id="Circle3" fill="url(#gradient_1)" fill-rule="evenodd" stroke="none" />
+                      <path d="M48.737 297.207C48.737 265.614 74.3485 240.002 105.942 240.002C137.535 240.002 163.147 265.614 163.147 297.207C163.147 328.8 137.535 354.412 105.942 354.412C74.3485 354.412 48.737 328.8 48.737 297.207L48.737 297.207Z" id="Circle4" fill="url(#gradient_2)" fill-rule="evenodd" stroke="none" />
+                      <path d="M612.222 429.255C612.222 404.937 631.935 385.224 656.253 385.224C680.571 385.224 700.284 404.937 700.284 429.255C700.284 453.573 680.571 473.286 656.253 473.286C631.935 473.286 612.222 453.573 612.222 429.255L612.222 429.255Z" id="Circle5" fill="url(#gradient_3)" fill-rule="evenodd" stroke="none" />
+                      <g id="Line" transform="translate(190 27.765)">
+                        <path d="M0 0L230.55 132.915" id="Line" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="7" stroke-linecap="round" />
+                      </g>
+                      <path d="M669.826 249.753C669.826 237.522 679.741 227.607 691.972 227.607C704.203 227.607 714.118 237.522 714.118 249.753C714.118 261.984 704.203 271.899 691.972 271.899C679.741 271.899 669.826 261.984 669.826 249.753L669.826 249.753Z" id="Circle6" fill="url(#gradient_4)" fill-rule="evenodd" stroke="none" />
+                      <path d="M347.909 80C347.909 56.122 367.266 36.765 391.144 36.765C415.022 36.765 434.379 56.122 434.379 80C434.379 103.878 415.022 123.235 391.144 123.235C367.266 123.235 347.909 103.878 347.909 80L347.909 80Z" id="Circle6" fill="url(#gradient_5)" fill-rule="evenodd" stroke="none" />
+                      <path d="M311.391 192.612C311.391 185.514 317.145 179.76 324.243 179.76C331.341 179.76 337.095 185.514 337.095 192.612C337.095 199.71 331.341 205.464 324.243 205.464C317.145 205.464 311.391 199.71 311.391 192.612L311.391 192.612Z" id="Circle6" fill="url(#gradient_6)" fill-rule="evenodd" stroke="none" />
+                    </g>
+                    <path d="M544.226 93.813C544.226 67.857 565.267 46.816 591.223 46.816C617.179 46.816 638.22 67.857 638.22 93.813C638.22 119.769 617.179 140.81 591.223 140.81C565.267 140.81 544.226 119.769 544.226 93.813L544.226 93.813Z" id="Circle3" fill="url(#gradient_7)" fill-rule="evenodd" stroke="none" />
+                    <path d="M438 319.399C438 301.928 452.163 287.765 469.634 287.765C487.105 287.765 501.268 301.928 501.268 319.399C501.268 336.87 487.105 351.033 469.634 351.033C452.163 351.033 438 336.87 438 319.399L438 319.399Z" id="Circle2" fill="url(#gradient_8)" fill-rule="evenodd" stroke="none" />
+                  </g>
+                  <g id="lins1" transform="translate(28.645004 13.763992)">
+                    <g id="Line1" transform="translate(541 0)">
+                      <path d="M0 0L127.272 73.375" id="Line" fill="none" fill-rule="evenodd" stroke="#B5E742" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line2" transform="translate(541.83997 252.63)">
+                      <path d="M0 0L41.475 23.911" id="Line" fill="none" fill-rule="evenodd" stroke="#B5E742" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line2" transform="translate(483 137)">
+                      <path d="M0 0L41.475 23.911" id="Line" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line2" transform="translate(235 372)">
+                      <path d="M0 0L24.822 14.31" id="Line" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line1" transform="translate(418.826 11.333)">
+                      <path d="M0 0L24.823 14.311" id="Line" fill="none" fill-rule="evenodd" stroke="#E74242" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line3" transform="translate(0 352)">
+                      <path d="M0 0L102.274 53.83" id="Line" fill="none" fill-rule="evenodd" stroke="#B5E742" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line5" transform="translate(136 234)">
+                      <path d="M0 0L276.11 164.025" id="Line" fill="none" fill-rule="evenodd" stroke="#B5E742" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                    <g id="Line5" transform="translate(85.102005 352)">
+                      <path d="M0 0L101.397 58.457" id="Line" fill="none" fill-rule="evenodd" stroke="#B5E742" stroke-width="7" stroke-linecap="round" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+</div>
+<!----background svg end=========================-->
+ <!----===============background image end====================-->
 
-                <a href="#about_section" onclick="about_change()"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
-                        viewBox="0 -960 960 960" width="30px" fill="#ffff">
-                        <path
-                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
-                    </svg> </a>
-            </div>
-        <!---<div class="nav_bars">
-                <a href=" #notification_section" onclick="notification_change()"> <svg
-                        xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
-                        fill="#e8eaed">
-                        <path
-                            d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
-                    </svg> </a>
-            </div>-->
-        <div class="nav_bars">
-                <a href=" #social_section" onclick="social_change()"><svg xmlns="http://www.w3.org/2000/svg"
-                        height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffff">
-                        <path
-                            d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
-                    </svg> </a>
-            </div>
-            <div class="nav_bars">
-                <a href="index.html"> <svg xmlns="http://www.w3.org/2000/svg" height="30px"
-                        viewBox="0 -960 960 960" width="30px" fill="#e8eaed">
-                        <path
-                            d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
-                    </svg></a>
-            </div>
-        </div>
-    </header>
-    <!---=====================nav bar header section end-->
-    <p id="dot"></p>
     <!---=====================main section-->
     <main>
         <!----===============home section====================-->
@@ -164,14 +233,57 @@
     </main>
     <!---=====================nav bar header section end-->
 
-    <!---=====================theme toggle button-->
-    <div class="toggle-container" onclick="toggleTheme()">
-        <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 -960 960 960" width="10px" fill="#e8eaed">
-            <path
-                d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z" />
-        </svg>
+    
+<!---=====================nav bar header section-->
+<header>
+    <div class="nav_bar_container">
+        <div class="nav_bars">
+            <a href="#home_section" onclick="home_change()"><svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                    viewBox="0 -960 960 960" width="40px" fill="#ffff">
+                    <path
+                        d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                </svg></a>
+        </div>
+        <div class="nav_bars">
+
+            <a href="#about_section" onclick="about_change()"><svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                    viewBox="0 -960 960 960" width="40px" fill="#ffff">
+                    <path
+                        d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
+                </svg> </a>
+        </div>
+    <!---<div class="nav_bars">
+            <a href=" #notification_section" onclick="notification_change()"> <svg
+                    xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                    fill="#e8eaed">
+                    <path
+                        d="M160-200v-80h80v-280q0-83 50-147.5T420-792v-28q0-25 17.5-42.5T480-880q25 0 42.5 17.5T540-820v28q80 20 130 84.5T720-560v280h80v80H160Zm320-300Zm0 420q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-280h320v-280q0-66-47-113t-113-47q-66 0-113 47t-47 113v280Z" />
+                </svg> </a>
+        </div>-->
+    <div class="nav_bars">
+            <a href=" #social_section" onclick="social_change()"><svg xmlns="http://www.w3.org/2000/svg"
+                    height="40px" viewBox="0 -960 960 960" width="40px" fill="#ffff">
+                    <path
+                        d="M760-480q0-117-81.5-198.5T480-760v-80q75 0 140.5 28.5t114 77q48.5 48.5 77 114T840-480h-80Zm-160 0q0-50-35-85t-85-35v-80q83 0 141.5 58.5T680-480h-80Zm198 360q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
+                </svg> </a>
+        </div>
+        <div class="nav_bars">
+            <a href="index.html"> <svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                    viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
+                    <path
+                        d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h280v80H200Zm440-160-55-58 102-102H360v-80h327L585-622l55-58 200 200-200 200Z" />
+                </svg></a>
+        </div>
+        <div class="nav_bars">
+           <!---=====================theme toggle button-->
+            <div class="header_toogle">
+                <button id="toggleButton"> <svg  id="darkm" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/></svg>  <svg id="lightm" xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e8eaed"><path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/></svg> </button>
+        </div>                         
+        <!---=====================theme toggle button end-->
+        </div>
     </div>
-    <!---=====================theme toggle end-->
+</header>
+<!---=====================nav bar header section end-->
 
 
 </body>

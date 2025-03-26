@@ -39,22 +39,39 @@ function social_change(){
 
 //content pages end=============//
 
-//theme change page=============//
-function toggleTheme(){
-const body = document.body;
-  body.classList.toggle('dark-mode');
-  const isDarkMode = body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    };
-const loadTheme = () => {
-  const theme = localStorage.getItem('theme');
-  if (theme === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
-};
+//theme change ===================================================
+const tbody1=document.getElementById("tbody1");
+const darkm =document.getElementById("darkm");
+const lightm =document.getElementById("lightm");
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('toggleButton');
+    const body = document.body;
 
-window.onload = loadTheme;
-//theme change page end=============//
+    // Load the saved mode from localStorage
+    const savedMode = localStorage.getItem('mode');
+    if (savedMode) {
+        body.classList.add(savedMode);
+    }
+
+    toggleButton.addEventListener('click', () => {
+        if (body.classList.contains('light-mode')) {
+            body.classList.remove('light-mode');
+            darkm.style.display="block";
+            lightm.style.display="none";
+            body.classList.add('dark-mode');
+            // localStorage.setItem('mode', 'dark-mode');
+        } else {
+            darkm.style.display="none";
+            lightm.style.display="block";
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            localStorage.setItem('mode', 'light-mode');
+        }
+    });
+});
+//theme change end===================================================
+
+
 
 //notification page================//
 
